@@ -1,8 +1,0 @@
-#!/usr/bin/Rscript
-
-library(jsonlite)
-tests <- '{"name":"alex","objects":{"val": "32"}}'
-jsontest <- fromJSON(tests)
-jsontest$type <- unbox(jsontest$type)
-jsontest$objects$map <- unbox(jsontest$objects$map)
-toJSON(jsontest)
